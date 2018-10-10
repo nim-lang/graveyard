@@ -12,3 +12,6 @@ eg:
 nimble install xmldom
 ```
 
+## Adding an obsolete package to graveyard
+Use a PR similar to https://github.com/nim-lang/packages/pull/885
+
