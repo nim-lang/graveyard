@@ -17,7 +17,10 @@
 
 from strutils import parseInt, cmpIgnoreStyle, Digits
 include "system/inclrtl"
-import system/helpers2
+
+when NimVersion < "0.19.9":
+  template formatErrorIndexBound*[T](i, n: T): string =
+    "index out of bounds: (i: " & $i & ") <= (n: " & $n & ") "
 
 proc findNormalized(x: string, inArray: openarray[string]): int =
   var i = 0
